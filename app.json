@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "testFulll",
+    "slug": "testFulll",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "testFulll"
+}
