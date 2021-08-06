@@ -8,7 +8,7 @@ import Home from "../Screens/home/home"
 const StackLogIn = createStackNavigator();
 function LogIn() {
     return (
-        <StackLogIn.Navigator headerMode="none">
+        <StackLogIn.Navigator screenOptions={{headerShown: false}}>
             <StackLogIn.Screen name="Login" component={Login}/>
         </StackLogIn.Navigator>
     )
@@ -18,7 +18,7 @@ function LogIn() {
 const StackHomePage = createStackNavigator();
 function Homepage() {
     return (
-        <StackHomePage.Navigator headerMode="none">
+        <StackHomePage.Navigator screenOptions={{headerShown: false}}>
             <StackHomePage.Screen name="Home" component={Home}/>
         </StackHomePage.Navigator>
     )
@@ -28,7 +28,7 @@ const StackNavigation = createStackNavigator();
 function Navigator() {
     return (
         <NavigationContainer>
-        <StackNavigation.Navigator initialRouteName="LoginStack" headerMode="none">
+        <StackNavigation.Navigator initialRouteName="LoginStack" screenOptions={{headerShown: false}}>
             <StackNavigation.Screen name="LoginStack" component={LogIn} />
             <StackNavigation.Screen name="HomeStack" component={Homepage} />
         </StackNavigation.Navigator>
