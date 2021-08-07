@@ -2,22 +2,23 @@ import React from "react";
 import {
     TouchableOpacity,
     StyleSheet,
-    Text } from "react-native";
-import propTypes from 'prop-types';
-
-
-const IEDFormButton = (props) => {
-
-    const { TextButton, onSubmit } = props;
-
-    return (
-      
-        <TouchableOpacity style={buttonStyles.buttonContainer} onPress={onSubmit}>
-            <Text style={buttonStyles.textStyle}>{TextButton}</Text>
-            </TouchableOpacity>
+    Text
+} from "react-native";
     
+const IEDFormButton = (props) => {
+    const { TextButton, onSubmit } = props;
+    return (
+        <TouchableOpacity
+            isEnable={true}
+            style={buttonStyles.buttonContainer}
+            onPress={onSubmit}
+        >
+            <Text
+                style={buttonStyles.textStyle}>
+                {TextButton}
+            </Text>
+        </TouchableOpacity>
     )
-
 }
 
 const buttonStyles = StyleSheet.create({
