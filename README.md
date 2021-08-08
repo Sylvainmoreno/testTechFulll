@@ -12,7 +12,7 @@ an In Extenso Digital Collaborator, the homepage is a bit different. I
 created 2 custom components called IEDFormInput and IEDFormButton. 
 
 ## Technologies
-This project was created with:
+This project was developed with:
 
 * Formik (https://formik.org/): Formik is a React Library. I used it to
                                 to create a form for the email and password
