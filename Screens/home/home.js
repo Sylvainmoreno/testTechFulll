@@ -30,10 +30,11 @@ const Home = ({ route, navigation }) => {
       <IEDFormButton
         TextButton="Logout"
         onSubmit={() => {
-          navigation.navigate("LoginStack",
-            {
-              screen: "Login"
-            });
+          navigation.reset({
+            routes: [{
+              name: "LoginStack"
+            }]
+          })
         }}
       />
     </View>

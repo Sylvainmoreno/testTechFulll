@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    Keyboard,
     StyleSheet,
     TextInput } from "react-native";
 import propTypes from 'prop-types';
@@ -15,21 +14,27 @@ import propTypes from 'prop-types';
 
 const IEDFormInput = (props) => {
     //destructurer les params
-    const { placeholderText, handleChangedText, keyboardType, returnKeyType, secureTextEntry, autoCorrect, autoCompleteType } = props;
+    const {
+        placeholderText,
+        handleChangedText,
+        keyboardType,
+        returnKeyType,
+        secureTextEntry,
+        autoCorrect,
+        autoCompleteType
+    } = props;
 
     return (
-        // <View>
         <TextInput
-        returnKeyType={returnKeyType}
-        autoCompleteType={autoCompleteType}
-        autoCorrect={autoCorrect}
-        secureTextEntry={secureTextEntry}
+            returnKeyType={returnKeyType}
+            autoCompleteType={autoCompleteType}
+            autoCorrect={autoCorrect}
+            secureTextEntry={secureTextEntry}
             keyboardType={keyboardType}
-                placeholder={placeholderText}   
-                style={inputStyles.defaultStyle}
-                onChangeText={ (text) => handleChangedText(text) }       
-            />
-        // </View>
+            placeholder={placeholderText}
+            style={inputStyles.defaultStyle}
+            onChangeText={(text) => handleChangedText(text)}
+        />
     )
 }
 

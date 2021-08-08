@@ -24,7 +24,7 @@ const IEDFormButton = (props) => {
 const buttonStyles = StyleSheet.create({
     buttonContainer: {
         width: "80%",
-        height: "20%",
+        height: 60,
         alignSelf: "center",
         marginTop: "20%",
         borderWidth: 1,

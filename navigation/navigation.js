@@ -9,7 +9,14 @@ const StackLogIn = createStackNavigator();
 function LogIn() {
     return (
         <StackLogIn.Navigator screenOptions={{headerShown: false}}>
-            <StackLogIn.Screen name="Login" component={Login}/>
+            <StackLogIn.Screen
+                name="Login"
+                component={Login}
+                initialParams={{
+                    email: "",
+                    password: ""
+                }}
+            />
         </StackLogIn.Navigator>
     )
 }
@@ -19,7 +26,9 @@ const StackHomePage = createStackNavigator();
 function Homepage() {
     return (
         <StackHomePage.Navigator screenOptions={{headerShown: false}}>
-            <StackHomePage.Screen name="Home" component={Home}/>
+            <StackHomePage.Screen
+                name="Home"
+                component={Home} />
         </StackHomePage.Navigator>
     )
 }
@@ -28,9 +37,17 @@ const StackNavigation = createStackNavigator();
 function Navigator() {
     return (
         <NavigationContainer>
-        <StackNavigation.Navigator initialRouteName="LoginStack" screenOptions={{headerShown: false}}>
-            <StackNavigation.Screen name="LoginStack" component={LogIn} />
-            <StackNavigation.Screen name="HomeStack" component={Homepage} />
+            <StackNavigation.Navigator
+                initialRouteName="LoginStack"
+                screenOptions={{ headerShown: false }}>
+                <StackNavigation.Screen
+                    name="LoginStack"
+                    component={LogIn}
+                />
+                <StackNavigation.Screen
+                    name="HomeStack"
+                    component={Homepage}
+                />
         </StackNavigation.Navigator>
         </NavigationContainer>
     )
